@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background = "@color/background_color"
+    tools:context=".ui.Fragments.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent">
+
+        <LinearLayout
+            android:id = "@+id/LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin = "10dp"
+            android:gravity = "center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id = "@+id/allNotes"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin = "5dp"
+                android:background = "@drawable/btn_filter"/>
+
+            <TextView
+                android:id = "@+id/filterHigh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily = "@font/regularfont"
+                android:textSize = "18sp"
+                android:text = "High"
+                android:background = "@drawable/btn_filter_shape"
+                android:paddingStart = "28dp"
+                android:paddingEnd = "28dp"
+                android:paddingTop = "10dp"
+                android:paddingBottom = "10dp"
+                android:layout_marginStart = "5dp"
+                android:textColor = "@color/red_color"/>
+
+            <TextView
+                android:id = "@+id/filterMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily = "@font/regularfont"
+                android:textSize = "18sp"
+                android:text = "Medium"
+                android:background = "@drawable/btn_filter_shape"
+                android:paddingStart = "28dp"
+                android:paddingEnd = "28dp"
+                android:paddingTop = "10dp"
+                android:paddingBottom = "10dp"
+                android:layout_marginStart = "10dp"
+                android:textColor = "@color/yellow_color"/>
+
+            <TextView
+                android:id = "@+id/filterLow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily = "@font/regularfont"
+                android:textSize = "18sp"
+                android:text = "Low"
+                android:background = "@drawable/btn_filter_shape"
+                android:paddingStart = "28dp"
+                android:paddingEnd = "28dp"
+                android:paddingTop = "10dp"
+                android:paddingBottom = "10dp"
+                android:layout_marginStart = "10dp"
+                android:textColor = "@color/green_color"/>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvAllNotes"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/LinearLayout">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id = "@+id/btnAddNotes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="26dp"
+            android:src="@drawable/ic_baseline_add_24"
+            app:backgroundTint="@color/red_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" >
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
